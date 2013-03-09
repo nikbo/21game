@@ -1,11 +1,9 @@
 require './lib/die'
 require './lib/players'
 require './lib/step'
-require './lib/game'
 require './lib/check'
 players = [Player.new("Gulec 1"), Player.new("Gulec 2")]
 die=Die.new
-game=Game.new
 puts "Hi, it's 21 game"
   players.each do |player|
     step=Step.new(player)
