@@ -8,6 +8,7 @@ class Step
     @f_step_1=0
     @f_step_2=0
     @steps_all=0
+    @k=0
   end
 
   def begin_1(f_step_1)
@@ -28,5 +29,17 @@ class Step
     @f_step_2=0
     @f_step_1=0
   end
+  def add_ace
+    if @f_step_1==11 || @f_step_2==11
+       @k+=1
+    end
+  end
+  def check_ace
+    if @player.points>21 && @k=1
+      @player.points-=11
+      @player.points+=1
+      @k=0
+    end
+end
 
 end

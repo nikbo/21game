@@ -13,6 +13,8 @@ puts "Hi, it's 21 game"
     puts "Your first cards is #{die.cards[step.f_step_1]} and #{die.cards[step.f_step_2]}"
     step.add
     puts "Your points is #{player.points}"
+    step.add_ace
+    step.check_ace
     break if player.points>21
     puts "Did you want more Points?"
     player_choice=gets.chomp
